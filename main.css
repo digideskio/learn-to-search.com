@@ -96,11 +96,60 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
+section {
+    height: 50%;
+}
 
+header {
+    text-align: center;
+    margin: 2rem;
+}
 
+header h1 {
+    text-align: left;
+    border:1px solid #4d90fe;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 0.2em 1rem;
+    margin: 0 auto;
+    min-width: 50%;
+    display: inline-block;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+}
 
+section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
 
+.section-child {
+    -webkit-align-self: center;
+    width: 70%;
+}
+
+.slide-intro {
+    background: url(whitemalesusinggoogleglass.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.slide-intro h1 {
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    font-weight: normal;
+    font-size: 3rem;
+    text-align: center;
+}
 
 
 
