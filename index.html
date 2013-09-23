@@ -56,6 +56,16 @@
         </section>
         <section>
             <h1 class=section-child>Ta-da! Your internet seach skills will double in less than a year</h1>
+            <canvas id=searchprogressgraph width=800 height=400></canvas>
+            <script>
+                var canvasElement = document.getElementById('searchprogressgraph');
+                var ctx = canvasElement.getContext('2d');
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.lineTo(1, 700);
+                ctx.fill();
+                ctx.closePath();
+           </script>
         </section>
         <section>
             <div class=section-child>
@@ -88,7 +98,6 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
