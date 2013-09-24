@@ -103,10 +103,6 @@ html, body {
     padding: 0;
 }
 
-section {
-    height: 50%;
-}
-
 header {
     text-align: center;
     margin: 2rem;
@@ -125,23 +121,33 @@ header h1 {
     font-weight: normal;
 }
 
-section {
+
+body {
     display: -webkit-box;
-    display: -webkit-flex;
-    -webkit-justify-content: center;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
+    display: flex;
+    flex-flow: column;
 }
 
-.section-child {
-    -webkit-align-self: center;
+header {
+    flex: 0 1 auto;
+}
+
+.looper {
+    flex: 1 0 auto;
+}
+
+
+footer {
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+
+.section-child ,
+.slide-child {
     width: 70%;
 }
 
-.slide-intro {
-    background: url(whitemalesusinggoogleglass.jpg) no-repeat center center;
-    background-size: cover;
-}
 
 .slide-intro h1 {
     color: #fff;
@@ -152,10 +158,26 @@ section {
 }
 
 
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;    
+    background: url(whitemalesusinggoogleglass.jpg) no-repeat center center;
+    background-size: cover;
+}
 
 
 
+.item:nth-of-type(1) .slide {
+    background-image: url(slide-2.jpg);
+    background-size: contain;
+}
 
+
+.item:nth-of-type(2) .slide {
+    background-image: url(slide-3.jpg);
+}
 
 
 
