@@ -123,21 +123,26 @@ header h1 {
 
 
 body {
-    display: -webkit-box;
-    display: flex;
+    display: -webkit-box;    
+    display: flex;        
+    flex-direction: column;
+    -webkit-box-orient: vertical;
     flex-flow: column;
 }
 
 header {
+    -webkit-box-flex: 0;
     flex: 0 1 auto;
 }
 
 .looper {
+    -webkit-box-flex: 1;
     flex: 1 0 auto;
 }
 
 
 footer {
+    -webkit-box-flex: 0;
     flex: 0 1 auto;
     text-align: center;
 }
@@ -159,7 +164,10 @@ footer {
 
 
 .slide {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
     align-items: center;
     justify-content: center;
     height: 100%;    
