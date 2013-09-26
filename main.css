@@ -103,6 +103,11 @@ html, body {
     padding: 0;
 }
 
+a {
+    text-decoration:none;
+    color: indianred;
+}
+
 header {
     text-align: center;
     margin: 2rem;
@@ -176,20 +181,38 @@ footer {
 }
 
 
-.item:nth-of-type(1) .slide {
+.item:nth-of-type(3) .slide {
     background-image: url(whitemalesusinggoogleglass.jpg);
     background-repeat: no-repeat;
     background-size: cover;    
 }
 
-.item:nth-of-type(2) .slide {
+.item.write-email .slide {
+    background-image: url(LTS-email%20gif.gif);
+    background-repeat:no-repeat;
+    background-size:contain;
+}
+
+.item.search .slide {
+    background-image: url(LTS-google.gif);
+    background-repeat:no-repeat;
+    background-size:contain;    
+}
+
+.item.wikipedia .slide {
+    background-image: url(wikipedia%20browse.gif);
+    background-repeat:no-repeat;
+    background-size:contain;    
+}    
+
+.item.teach .slide {
     background-image: url(slide-2.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 
-.item:nth-of-type(3) .slide {
+.item.empathize .slide {
     background-image: url(slide-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
