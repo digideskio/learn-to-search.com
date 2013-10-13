@@ -187,9 +187,11 @@ header {
 
 footer {
     -webkit-box-flex: 0;
-    flex: 0 1 auto;
-    text-align: center;
-    padding: 2rem 0;
+    padding: 2rem;
+    color: #eee;
+    font-size: 0.8rem;
+    line-height: 2;
+    background: url(rebel.png) repeat center center;
 }
 
 footer p {
@@ -216,6 +218,12 @@ footer p {
     font-size: 2rem;  
 }
 
+.slide iframe {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+}
+
 
 .item h1,
 .item.teach .slide h1 b {
@@ -227,8 +235,9 @@ footer p {
 }
 
 .item.googleglass .slide {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(whitemalesusinggoogleglass.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(whitemalesusinggoogleglass.jpg);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat, no-repeat;
     background-size: cover;    
     text-align:center;
 }
@@ -253,12 +262,10 @@ footer p {
 }    
 
 .item.teach .slide img,
-.item.teach .slide h1 {
-    display: inline-block;
-    vertical-align: middle; 
-    width: 50%;
-    max-height:100%;
+.item.graph img {
+    width: 100%; 
 }
+
 
 .item.teach .slide h1 {
     font-size: 3rem;
@@ -270,6 +277,16 @@ footer p {
     display: block;
 }
 
+
+.item.empathize .slide {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(slide-3.png), url(rebel.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(slide-3.png), url(rebel.png);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: contain;
+}
+
+@media (min-width: 800px) {
+
 .item.teach .slide img,
 .item.graph img {
     width: 45%; 
@@ -277,18 +294,12 @@ footer p {
 }
 
 
-.item.graph img {
+.item.graph img,
+.item.teach .slide img {
     float: left;
 }
 
-
-.item.empathize .slide {
-    background-image: url(slide-3.png), url(rebel.png);
-    background-repeat: no-repeat, repeat;
-    background-size: contain;
 }
-
-
 
 
 /* ==========================================================================
