@@ -219,12 +219,20 @@ footer p {
 }
 
 
-.item h1,
-.item.teach .slide h1 b {
+.item h1 {
     font-weight: normal;
     word-spacing:0.5rem;
     font: 4rem/1.5 'Arbutus Slab', serif;  
 
+}
+
+.item.male-searchliteracy .slide {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(male-searchliteracy.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(male-searchliteracy.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;    
+    color: #fff;
+    text-align:center;
 }
 
 .item.toilets .slide {
@@ -280,23 +288,18 @@ footer p {
     width: 100%; 
 }
 
-
-.item.teach .slide h1 {
-    font-size: 3rem;
-    font-family: sans-serif;
-    text-shadow: none;
-}
-
 .item.teach .slide h1 b {
     display: block;
 }
 
 
 .item.empathize .slide {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(slide-3.png), url(rebel.png);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(slide-3.png), url(rebel.png);
-    background-repeat: no-repeat, no-repeat, repeat;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(slide-3.png)
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(slide-3.png);
+    background-repeat: no-repeat, no-repeat;
     background-size: contain;
+    color: #fff;
+    text-align: center;
 }
 
 @media (min-width: 800px) {
