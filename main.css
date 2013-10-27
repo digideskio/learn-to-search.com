@@ -101,7 +101,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font: 1rem/1.5 'Source sans', sans-serif;
+    font: 1rem/1.5 'Source Sans Pro', sans-serif;
 }
 
 a {
@@ -223,15 +223,17 @@ footer p {
     font-weight: normal;
     word-spacing:0.5rem;
     font: 4rem/1.5 'Arbutus Slab', serif;  
+}
 
+.item h2 {
+    font-weight: normal;
 }
 
 .item.male-searchliteracy .slide {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(male-searchliteracy.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(male-searchliteracy.jpg);
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(marina-man.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(marina-man.jpg);
     background-repeat: no-repeat, no-repeat;
     background-size: cover;    
-    color: #fff;
     text-align:center;
 }
 
@@ -268,7 +270,7 @@ footer p {
 .item.write-email .slide {
     background-image: url(email.png);
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:cover;    
 }
 
 .item.search .slide {
@@ -290,6 +292,14 @@ footer p {
 
 .item.teach .slide h1 b {
     display: block;
+    font-size: 3rem;
+}
+
+.item.teach .slide h1 i {
+    font-style: normal;
+    font-size: 2rem;
+    text-transform: uppercase;
+    word-spacing: 0;
 }
 
 
