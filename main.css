@@ -101,6 +101,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    font: 1rem/1.5 'Source sans', sans-serif;
 }
 
 a {
@@ -145,9 +146,7 @@ header h1 b {
 
 .title {
     font-size: 4rem;
-    font-size: 6rem;
-    font-family: 'Luckiest Guy', cursive;
-    text-shadow: 0 2px 2px #28B2FF, 0 4px 2px #28B2FF, 0 6px 2px #28B2FF, 0 8px 2px #28B2FF, 0 9px 0px blue;
+    font-size: 6rem;    
     letter-spacing: 5px;
     word-spacing: 10px;
     text-align: center;
@@ -188,10 +187,8 @@ header {
 footer {
     -webkit-box-flex: 0;
     padding: 2rem;
-    color: #eee;
     font-size: 0.8rem;
     line-height: 2;
-    background: url(rebel.png) repeat center center;
 }
 
 footer p {
@@ -213,9 +210,6 @@ footer p {
     align-items: center;
     justify-content: center;
     height: 100%;    
-    background: url(rebel.png) repeat center center;
-    color: #fff;  
-    font-size: 2rem;  
 }
 
 .slide iframe {
@@ -228,17 +222,37 @@ footer p {
 .item h1,
 .item.teach .slide h1 b {
     font-weight: normal;
-    font-family: 'Luckiest Guy', cursive;
-    text-shadow: 0 2px 2px #28B2FF, 0 4px 2px #28B2FF, 0 6px 2px #28B2FF, 0 8px 2px #28B2FF, 0 9px 0px blue;
     word-spacing:0.5rem;
+    font: 4rem/1.5 'Arbutus Slab', serif;  
 
 }
+
+.item.toilets .slide {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(techconference-audience.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(techconference-audience.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;    
+    color: #fff;
+    text-align:center;
+}
+
+.item.bustle .slide {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(bustle.gif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bustle.gif);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;   
+    color: #fff;
+    text-align:center;
+}
+
+
 
 .item.googleglass .slide {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(whitemalesusinggoogleglass.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(whitemalesusinggoogleglass.jpg);
     background-repeat: no-repeat, no-repeat;
     background-size: cover;    
+    color: #fff;
     text-align:center;
 }
 
@@ -299,6 +313,8 @@ footer p {
     float: left;
 }
 
+.looper-control {
+    border-radius: 3rem;
 }
 
 
