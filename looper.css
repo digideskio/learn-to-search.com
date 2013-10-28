@@ -142,7 +142,8 @@
         min-height: 200px;
     }
 
-    .links .slide {
+    .links .slide,
+    .last-item-parent {
       min-height: 300px;
     }
 }

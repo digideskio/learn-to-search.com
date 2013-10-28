@@ -33,7 +33,9 @@ myLooper.on('show', function (e) {
 
 /* Stop the looping once last slide is reached - like a proper slide show. */
 myLooper.on('shown', function (e) {    	
-    if ($(e.relatedTarget).hasClass('last-item')) {   
+	var $slide = $(e.relatedTarget);
+    if ($slide.hasClass('last-item')) {   
+    	$slide.parent().parent().addClass('last-item-parent');
         myLooper.looper('pause');
         myLooper.data('looperjs').options.interval = false;
     }
