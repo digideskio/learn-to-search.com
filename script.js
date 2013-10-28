@@ -1,6 +1,8 @@
 var $slides = $('section.item');
 var myLooper = $('#controlLooper');
 var wufooContainer = $('#wufoo-zohx3rg069j5eu');
+var hash = document.location.hash;
+
 
 /* Assign IDs to each slide */
 $slides.each(function(index) {
@@ -8,26 +10,28 @@ $slides.each(function(index) {
 	this.id = 'js-slide|' + index; 
 });
 
-var hash = document.location.hash;
 
+/* Show the correct element if URL refers to it */
 if (hash != '') {
+	/* Because looper slides start with 1 and not 0 like every respectable web element should */
 	var slideIndex = +(/^#js-slide\|(.+)/g.exec(hash)[1]) + 1;
 	myLooper.looper('to', slideIndex);
 }
 
 
-/* Check if the slide is being referred */
-
+/* Start the slide show */
 myLooper.looper('loop');
 
 
+/* Update the URL when the next slide is going to be shown */
 myLooper.on('show', function (e) {
+	/* Check if the slide is being referred */
 	if(document.location.hash !== e.relatedTarget.id) {
 		document.location.hash = e.relatedTarget.id;	
 	}
-	console.log(e.relatedTarget.id, document.location.hash); 
 });
 
+/* Stop the looping once last slide is reached - like a proper slide show. */
 myLooper.on('shown', function (e) {    	
     if ($(e.relatedTarget).hasClass('last-item')) {   
         myLooper.looper('pause');
@@ -35,7 +39,7 @@ myLooper.on('shown', function (e) {
     }
 });
 
-/* Wufoo */
+/* Wufoo form set up */
 var zohx3rg069j5eu;(function(d, t) {
 var s = d.createElement(t), options = {
 'userName':'learntosearch', 
@@ -54,15 +58,18 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 })(document, 'script');
 
 
+/* Show the wufoo form */
 $('#js-teach-button').click(function(e) {
 	wufooContainer.addClass('show-container');
 	e.stopPropagation();
 });
 
+/* Dont hide the form when form modal is shown */
 wufooContainer.click(function(e) {
 	e.stopPropagation();
 });
 
+/* Clicking outside of wufoo container will hide the form */
 $('html').click(function() {
 	if(wufooContainer.hasClass('show-container')) {
 		wufooContainer.removeClass('show-container');

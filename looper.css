@@ -1,23 +1,33 @@
 .looper {
-  position: relative;  
+  position: relative;
 }
 .looper:focus {
   outline: 0;
 }
-.looper .looper-inner {
-  overflow: hidden;
-  width: 100%;
-  height: 100%
+
+.looper-inner {    
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    min-height: 500px;
 }
+
 .looper .item {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: none;
-  position: relative;
 }
-.looper .item.active,
+
 .looper .item.next,
 .looper .item.prev {
   display: block;
 }
+
+.looper .item.active {
+  height: 100%;
+  display: block;  
+}
+
 
 .looper .item > img {
   display: block;
@@ -29,7 +39,6 @@
 .looper.xfade .item {
   -webkit-transition: 0.5s ease-in opacity;
   transition: 0.5s ease-in opacity;
-  position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -43,120 +52,7 @@
 .looper.xfade .item.active.go {
   opacity: 0;
 }
-.looper.slide.xfade .item {
-  -webkit-transition: 0.5s ease-in-out left, 0.5s ease-in opacity;
-  transition: 0.5s ease-in-out left, 0.5s ease-in opacity;
-}
-.looper.slide .item {
-  -webkit-transition: 0.5s ease-in-out left;
-  transition: 0.5s ease-in-out left;
-}
-.looper.slide .item.next,
-.looper.slide .item.prev {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.looper.slide .item.next {
-  left: 100%;
-}
-.looper.slide .item.prev {
-  left: -100%;
-}
-.looper.slide .item.active.prev,
-.looper.slide .item.active.next {
-  position: relative;
-  left: 0;
-}
-.looper.slide .item.go {
-  left: 0;
-}
-.looper.slide .item.go.active {
-  left: -100%;
-}
-.looper.slide .item.go.active.prev {
-  left: 100%;
-}
-.looper.slide.right .item.next {
-  left: -100%;
-}
-.looper.slide.right .item.prev {
-  left: 100%;
-}
-.looper.slide.right .item.go {
-  left: 0;
-}
-.looper.slide.right .item.go.active {
-  left: 100%;
-}
-.looper.slide.right .item.go.active.prev {
-  left: -100%;
-}
-.looper.slide.down .looper-inner {
-  height: 100%;
-}
-.looper.slide.down .item {
-  -webkit-transition: 0.5s ease-in-out top;
-  transition: 0.5s ease-in-out top;
-}
-.looper.slide.down .item.next,
-.looper.slide.down .item.prev {
-  left: 0;
-}
-.looper.slide.down .item.next {
-  top: -100%;
-}
-.looper.slide.down .item.prev {
-  top: 100%;
-}
-.looper.slide.down .item.go {
-  top: 0;
-}
-.looper.slide.down .item.go.active {
-  top: 100%;
-  left: 0;
-}
-.looper.slide.down .item.go.active.prev {
-  top: -100%;
-}
-.looper.slide.down.xfade .item {
-  -webkit-transition: 0.5s ease-in-out top, 0.5s ease-in opacity;
-  transition: 0.5s ease-in-out top, 0.5s ease-in opacity;
-}
-.looper.slide.up .looper-inner {
-  height: 100%;
-}
-.looper.slide.up .item {
-  -webkit-transition: 0.5s ease-in-out top;
-  -moz-transition: 0.5s ease-in-out top;
-  -o-transition: 0.5s ease-in-out top;
-  transition: 0.5s ease-in-out top;
-}
-.looper.slide.up .item.next,
-.looper.slide.up .item.prev {
-  left: 0;
-}
-.looper.slide.up .item.next {
-  top: 100%;
-}
-.looper.slide.up .item.prev {
-  top: -100%;
-}
-.looper.slide.up .item.go {
-  top: 0;
-}
-.looper.slide.up .item.go.active {
-  top: -100%;
-  left: 0;
-}
-.looper.slide.up .item.go.active.prev {
-  top: 100%;
-}
-.looper.slide.up.xfade .item {
-  -webkit-transition: 0.5s ease-in-out top, 0.5s ease-in opacity;
-  transition: 0.5s ease-in-out top, 0.5s ease-in opacity;
-}
+
 .looper-control {
   position: absolute;
   z-index: 2;
@@ -208,4 +104,11 @@
 .looper-nav > li.active a,
 .looper-nav > li.active a:hover {
   color: #036690;
+}
+
+@media (max-width: 999px) {  
+    .looper-inner,
+    .slide {
+        min-height: 700px;
+    }
 }
