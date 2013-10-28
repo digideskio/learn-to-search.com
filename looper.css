@@ -141,4 +141,8 @@
     .slide {
         min-height: 200px;
     }
+
+    .links .slide {
+      min-height: 300px;
+    }
 }
