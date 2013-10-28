@@ -189,6 +189,9 @@ header {
   justify-content: center;
   padding: 0 10%;
   min-width: 700px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
 }
 
 
@@ -291,22 +294,24 @@ footer p {
 
 
 .item.write-email {
-    background: url(email.png) center center no-repeat;
-    background-size:contain; 
-    min-height: 500px;
+    background: url(email.png) center center no-repeat;    
 }
 
 .item.search {
-    background: url(LTS-google.gif) center center no-repeat;
-    background-size:contain;    
-    min-height: 500px;
+    background: url(LTS-google.gif) center center no-repeat;    
 }
 
 .item.wikipedia {
-    background: url(wikipedia%20browse.gif) center center no-repeat;
-    background-size:contain;   
-    min-height: 500px;
+    background: url(wikipedia%20browse.gif) center center no-repeat;    
 }    
+
+
+.item.write-email,
+.item.search,
+.item.wikipedia {
+    background-size:contain; 
+    min-height: 500px;
+}
 
 
 .item.graph {
@@ -374,6 +379,26 @@ footer p {
 
     .item.teach {
         background-size: 40% auto;
+        padding-left: 28%;
+    }
+
+    .item.teach .slide {
+        min-width: 100px;
+        padding: 0;        
+    }
+
+    .item.teach .slide h1 b {
+        font-size: 1.5rem;
+    }
+
+    .item.teach .slide h1 i {
+        font-size: 1rem;
+    }
+
+    .item.write-email,
+    .item.search,
+    .item.wikipedia {
+        min-height: 200px;
     }
 
 }
