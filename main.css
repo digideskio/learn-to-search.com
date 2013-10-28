@@ -274,8 +274,8 @@ footer p {
 }
 
 .item.bustle {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(bustle.gif);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bustle.gif);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(bustle.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bustle.png);
     background-repeat: no-repeat, no-repeat;
     background-size: cover;   
     color: #fff;
@@ -313,6 +313,13 @@ footer p {
     min-height: 500px;
 }
 
+.item.book-review {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(book-reviews.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(book-reviews.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    color: #fff;    
+}
 
 .item.graph {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(learn-to-search-graph.png);
@@ -326,7 +333,7 @@ footer p {
 .item.teach {
     background: url(slide-2.jpg) center left no-repeat;
     background-size: contain;
-    padding-left: 35%;    
+    padding-left: 60%;    
 }
 
 .item.empathize {
