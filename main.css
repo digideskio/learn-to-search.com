@@ -188,7 +188,7 @@ header {
   -webkit-justify-content: center;
   justify-content: center;
   padding: 0 10%;
-  min-height: 500px;
+  min-height: 700px;
 }
 
 
@@ -348,7 +348,7 @@ footer p {
     .slide {
         padding: 0 15%;
     }
-    
+
     html {
         font-size: 12px;
     }
@@ -413,7 +413,7 @@ footer p {
         margin-left: -400px;
         width: 800px;
         height: 600px;
-        outline: 100em solid black;
+        outline: 100em solid rgba(0, 0, 0, 0.7);
         background: #fff;
     }
 }
