@@ -188,7 +188,7 @@ header {
   -webkit-justify-content: center;
   justify-content: center;
   padding: 0 10%;
-  min-height: 700px;
+  min-width: 700px;
 }
 
 
@@ -246,14 +246,14 @@ footer p {
     font-weight: normal;
     word-spacing:0.5rem;
     font: 4rem/1.5 'Arbutus Slab', serif; 
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .item h2 {
     font-weight: normal;
 }
 
-.item.male-searchliteracy .slide {
+.item.male-searchliteracy {
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(marina-man.jpg);
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(marina-man.jpg);
     background-repeat: no-repeat, no-repeat;
@@ -261,7 +261,7 @@ footer p {
     text-align:center;
 }
 
-.item.toilets .slide {
+.item.toilets {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(techconference-audience.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(techconference-audience.jpg);
     background-repeat: no-repeat, no-repeat;
@@ -270,7 +270,7 @@ footer p {
     text-align:center;
 }
 
-.item.bustle .slide {
+.item.bustle {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(bustle.gif);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bustle.gif);
     background-repeat: no-repeat, no-repeat;
@@ -280,7 +280,7 @@ footer p {
 }
 
 
-.item.googleglass .slide {
+.item.googleglass {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(whitemalesusinggoogleglass.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(whitemalesusinggoogleglass.jpg);
     background-repeat: no-repeat, no-repeat;
@@ -290,24 +290,46 @@ footer p {
 }
 
 
-.item.write-email .slide {
+.item.write-email {
     background: url(email.png) center center no-repeat;
     background-size:contain; 
     min-height: 600px;
 }
 
-.item.search .slide {
+.item.search {
     background: url(LTS-google.gif) center center no-repeat;
     background-size:contain;    
     min-height: 500px;
 }
 
-.item.wikipedia .slide {
+.item.wikipedia {
     background: url(wikipedia%20browse.gif) center center no-repeat;
     background-size:contain;   
     min-height: 500px;
 }    
 
+
+.item.graph {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(learn-to-search-graph.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(learn-to-search-graph.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    color: #fff;
+}
+
+    
+.item.teach {
+    background: url(slide-2.jpg) center left no-repeat;
+    background-size: contain;
+    padding-left: 35%;    
+}
+
+.item.empathize {
+    background: url(slide-3.png) center center no-repeat;
+    background-size: contain;
+    color: #fff;
+    text-align: center;    
+}
 
 .item.teach .slide h1 b {
     display: block;
@@ -322,31 +344,11 @@ footer p {
 }
 
 
-.item.graph .slide {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(learn-to-search-graph.png);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(learn-to-search-graph.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain;
-    color: #fff;
-}
-
-.item.teach .slide {
-    background: url(slide-2.jpg) center left no-repeat;
-    background-size: auto 100%;
-    padding-left: 50%;    
-}
-
-.item.empathize .slide {
-    background: url(slide-3.png) center center no-repeat;
-    background-size: contain;
-    color: #fff;
-    text-align: center;    
-}
-
 @media (max-width: 999px) {
 
     .slide {
         padding: 0 15%;
+        min-width: 300px;
     }
 
     html {
@@ -370,8 +372,8 @@ footer p {
         box-sizing: border-box;
     }
 
-    .item.teach .slide {
-        background-size: 48% auto;
+    .item.teach {
+        background-size: 40% auto;
     }
 
 }
