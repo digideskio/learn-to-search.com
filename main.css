@@ -293,7 +293,7 @@ footer p {
 .item.write-email {
     background: url(email.png) center center no-repeat;
     background-size:contain; 
-    min-height: 600px;
+    min-height: 500px;
 }
 
 .item.search {

@@ -138,6 +138,6 @@
 @media (max-width: 999px) {  
     .looper-inner,
     .slide {
-        min-height: 700px;
+        min-height: 400px;
     }
 }
