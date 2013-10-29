@@ -7,14 +7,14 @@ var hash = document.location.hash;
 /* Assign IDs to each slide */
 $slides.each(function(index) {
 	var slide = $(this);
-	this.id = 'js-slide|' + index; 
+	this.id = 'slide-' + index; 
 });
 
 
 /* Show the correct element if URL refers to it */
 if (hash != '') {
 	/* Because looper slides start with 1 and not 0 like every respectable web element should */
-	var slideIndex = +(/^#js-slide\|(.+)/g.exec(hash)[1]) + 1;
+	var slideIndex = +(/^#slide\-(.+)/g.exec(hash)[1]) + 1;
 	myLooper.looper('to', slideIndex);
 }
 
