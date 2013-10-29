@@ -31,9 +31,7 @@ myLooper.on('show', function (e) {
 myLooper.on('shown', function (e) {    	
 	var $slide = $(e.relatedTarget);
     if ($slide.hasClass('last-item')) {   
-    	$slide.parent().parent().addClass('last-item-parent');
-        myLooper.looper('pause');
-        myLooper.data('looperjs').options.interval = false;
+    	$slide.parent().parent().addClass('last-item-parent');    
     }
 });
 

@@ -862,7 +862,7 @@ footer p {
 .item.teach {
     background: url(slide-2.jpg) center left no-repeat;
     background-size: contain;
-    padding-left: 60%;    
+    padding-left: 40%;    
 }
 
 .item.empathize {
@@ -870,6 +870,12 @@ footer p {
     background-size: contain;
     color: #fff;
     text-align: center;    
+}
+
+.item.teach .slide {
+    width: auto;
+    min-width:0;
+    text-align:left;
 }
 
 .item.teach .slide h1 b {
@@ -1018,8 +1024,8 @@ footer p {
 
 .looper .item .slide {
   opacity: 0;
-  -webkit-transition: 0.75s ease-in opacity;
-  transition: 0.75s ease-in opacity;
+  -webkit-transition: 0.5s ease-in opacity;
+  transition: 0.5s ease-in opacity;
 }
 
 .looper .item.next,
