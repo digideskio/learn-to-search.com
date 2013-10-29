@@ -19,10 +19,6 @@ if (hash != '') {
 }
 
 
-/* Start the slide show */
-myLooper.looper('loop');
-
-
 /* Update the URL when the next slide is going to be shown */
 myLooper.on('show', function (e) {
 	/* Check if the slide is being referred */
