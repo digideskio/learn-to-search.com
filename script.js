@@ -18,6 +18,24 @@ $slides.each(function(index) {
 });
 
 if(Modernizr.flexbox || Modernizr.flexboxlegacy) {
+    function displaySlide(slideId) {	
+		$('#slide-' + currentSlide).removeClass('active');
+		
+		$('#slide-' + slideId).addClass('active');
+
+		$slidesContainer.attr('data-bg', '');
+		$slidesContainer.attr('data-bg', $('#slide-' + slideId).data('bg'));	
+
+		if(currentSlide === 0 || currentSlide != slideId) {
+			currentSlide = slideId;
+		} 	
+	};
+
+	function updateURL (slideId) {
+		if(document.location.hash !== '#slide-' + slideId) {
+			document.location.hash = '#slide-' + slideId;
+		}
+	}
 
 	/* Show the correct element if URL refers to it */
 	if (hash != '') {	
@@ -38,28 +56,7 @@ if(Modernizr.flexbox || Modernizr.flexboxlegacy) {
 		displaySlide(slideIndex);
 		updateURL(slideIndex);
 		
-	});
-
-
-	function displaySlide(slideId) {	
-		$('#slide-' + currentSlide).removeClass('active');
-		
-		$('#slide-' + slideId).addClass('active');
-
-		$slidesContainer.attr('data-bg', '');
-		$slidesContainer.attr('data-bg', $('#slide-' + slideId).data('bg'));	
-
-		if(currentSlide === 0 || currentSlide != slideId) {
-			currentSlide = slideId;
-		} 	
-	};
-
-	function updateURL (slideId) {
-		if(document.location.hash !== '#slide-' + slideId) {
-			document.location.hash = '#slide-' + slideId;
-		}
-	}
-
+	});	
 } else {
 	$slides.addClass('active');
 }

@@ -736,7 +736,6 @@ header h1 b {
     color: #fff;
 }
 
-.no-flexbox .control,
 .no-flexboxlegacy .control {
     display: none;
 }
@@ -766,8 +765,7 @@ header h1 b {
     display: block;
 }
 
-.no-flexboxlegacy .item.active,
-.no-flexbox .item.active {
+.no-flexboxlegacy .item.active {
     margin: 2em;
     height: 500px;
     width: auto;
@@ -868,19 +866,16 @@ footer p {
 
 
 .container[data-bg="write-email"],
-.no-flexbox .item[data-bg="write-email"],
 .no-flexboxlegacy .item[data-bg="write-email"] {
     background: url(email.png) center center no-repeat;    
 }
 
 .container[data-bg="search"],
-.no-flexbox .item[data-bg="search"],
 .no-flexboxlegacy .item[data-bg="search"] {
     background: url(LTS-google.gif) center center no-repeat;    
 }
 
 .container[data-bg="wikipedia"],
-.no-flexbox .item[data-bg="wikipedia"],
 .no-flexboxlegacy .item[data-bg="wikipedia"] {
     background: url(wikipedia%20browse.gif) center center no-repeat;    
 }    
@@ -891,11 +886,8 @@ footer p {
     background-size: contain;
 }
 
-.no-flexbox .item[data-bg="write-email"],
 .no-flexboxlegacy .item[data-bg="write-email"],
-.no-flexbox .item[data-bg="search"],
 .no-flexboxlegacy .item[data-bg="search"],
-.no-flexbox .item[data-bg="write-email"],
 .no-flexboxlegacy .item[data-bg="write-email"] {
     height: 800px;
 }
@@ -949,7 +941,6 @@ footer p {
     width: 100%;
 }
 
-.no-flexbox .item[data-bg="teach"] .image img,
 .no-flexboxlegacy .item[data-bg="teach"] .image img {
     width: 300px;
     float: left;
