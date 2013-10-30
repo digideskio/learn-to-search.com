@@ -1,8 +1,15 @@
 var $slides = $('section.item');
-var myLooper = $('#controlLooper');
-var wufooContainer = $('#wufoo-zohx3rg069j5eu');
-var hash = document.location.hash;
+var $slidesContainer = $('.container');
 
+var currentSlide = 0;
+var slideIndex = 0;
+var slideLength = $slides.length;
+
+var hash = document.location.hash;
+var btnPrev = $('#js-prev-btn');
+var btnNext = $('#js-next-btn');
+
+var wufooContainer = $('#wufoo-zohx3rg069j5eu');
 
 /* Assign IDs to each slide */
 $slides.each(function(index) {
@@ -12,28 +19,61 @@ $slides.each(function(index) {
 
 
 /* Show the correct element if URL refers to it */
-if (hash != '') {
-	/* Because looper slides start with 1 and not 0 like every respectable web element should */
-	var slideIndex = +(/^#slide\-(.+)/g.exec(hash)[1]) + 1;
-	myLooper.looper('to', slideIndex);
+if (hash != '') {	
+	slideIndex = +(/^#slide\-(.+)/g.exec(hash)[1]);
+	displaySlide(slideIndex);		
+} else {
+	displaySlide(slideIndex);
+	updateURL(slideIndex);
 }
 
+$('.control button').click(function() {	
+	if(this.id == 'js-prev-btn') {
+		slideIndex = (slideIndex == 0 ? slideLength - 1 : slideIndex - 1);
+	} else {
+		slideIndex = (slideIndex + 1) % slideLength;
+	}
 
-/* Update the URL when the next slide is going to be shown */
+	displaySlide(slideIndex);
+	updateURL(slideIndex);
+	
+});
+
+
+function displaySlide(slideId) {	
+	$('#slide-' + currentSlide).removeClass('active');
+	
+	$('#slide-' + slideId).addClass('active');
+
+	$slidesContainer.attr('data-bg', '');
+	$slidesContainer.attr('data-bg', $('#slide-' + slideId).data('bg'));	
+
+	if(currentSlide === 0 || currentSlide != slideId) {
+		currentSlide = slideId;
+	} 	
+};
+
+function updateURL (slideId) {
+	if(document.location.hash !== '#slide-' + slideId) {
+		document.location.hash = '#slide-' + slideId;
+	}
+}
+
+/* Update the URL when the next slide is going to be shown 
 myLooper.on('show', function (e) {
-	/* Check if the slide is being referred */
+	
 	if(document.location.hash !== e.relatedTarget.id) {
 		document.location.hash = e.relatedTarget.id;	
 	}
 });
 
-/* Stop the looping once last slide is reached - like a proper slide show. */
+/* Stop the looping once last slide is reached - like a proper slide show. 
 myLooper.on('shown', function (e) {    	
 	var $slide = $(e.relatedTarget);
     if ($slide.hasClass('last-item')) {   
     	$slide.parent().parent().addClass('last-item-parent');    
     }
-});
+}); */
 
 /* Wufoo form set up */
 var zohx3rg069j5eu;(function(d, t) {

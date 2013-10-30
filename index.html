@@ -13,131 +13,76 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab|Source+Sans+Pro' rel='stylesheet' type='text/css'>        
         <link rel="stylesheet" href="main.css">
+        <script src="modernizr-flexbox.js"></script>
     </head>
     <body>
 
         <header>
             <h1 class=section-child>Learn to Search <b></b></h1>
+            <button class="button" id="js-teach-button">Teach someone how to search</button>
         </header>
-        <div id="controlLooper" data-looper="go" data-interval="false" data-speed=2000 class="looper xfade">
-            <div class="looper-inner">
+        <div class="teach-form" id="wufoo-zohx3rg069j5eu">
+        </div>
+        <div class="container">
+            <nav class="control prev">
+                <button id="js-prev-btn" class="button" title="Previous Slide">&lt;</button>
+            </nav>                        
+            
+            <div class="content">
                 <section class="item">
-                    <div class="slide">
-                        
-                            <h1 class="title"><i>Did</i> <u>you</u> <em>know?</em><b></b></h1>
-                        
-                    </div>
+                        <h1 class="title">Did you know?</h1>                    
                 </section>
-                <section class="item male-searchliteracy">
-                    <div class="slide">
-                                                    
+                <section class="item" data-bg="male-searchliteracy">
                             <h1>A number of tech professionals struggle with searching the internet.</h1>
-                        
-                    </div>
                 </section>
-                <section class="item toilets">
-                    <div class="slide">
-                                                    
+                <section class="item" data-bg="toilets">
                             <h1>In 2012, only 7% of men organizing tech conferences had the search skills to book male and female speakers in equal number.</h1>
-
-                    </div>
                 </section>
                 <section class="item">
-                    <div class="slide">
-                                                    
                             <h1>Experts agree that most "best of" lists that ignore women are the result of poor search skills.</h1>
-
-                    </div>
                 </section>
-                <section class="item googleglass">
-                    <div class="slide">
-                                                    
+                <section class="item" data-bg="googleglass">
                             <h1>Poor internet search skills result in homogeneous communities.</h1>
-                        
-                    </div>
                 </section>                
-                 <section class="item bustle">
-                    <div class="slide">
-                        
+                 <section class="item" data-bg="bustle">
                             <h1><a href="http://www.newyorker.com/reporting/2013/09/23/130923fa_fact_widdicombe">83% of entrepreneurs and 97% of venture capitalists</a> need to learn to search.</h1>
-                    </div>                
                 </section>
-                <section class="item book-review">
-                    <div class="slide">
-                        
+                <section class="item" data-bg="book-review">
                             <h1>Internet search skills are transferable to all industries and careers.</h1>
-                    </div>                 
                 </section>                
-                <section class="item teach">
-                    <div class="slide">
-                                                                         
-                            <h1><i>We can teach you to</i> <b>search!</b></h1>
-                        
-                    </div>
+                <section class="item" data-bg="teach">
+                            <div class="image"><img src="slide-2.jpg"></div>
+                            <h1><i>We can teach </i> <b>you to search!</b></h1>
                 </section>
                 <section class="item">
-                    <div class="slide">                        
-                        
                             <h1>Step 1</h1>
                             <h2>Learn to write an email</h2>
-                        
-                    </div>
                 </section>
-                <section class="item write-email">
-                    <div class="slide"> 
-                        
+                <section class="item" data-bg="write-email">
                             <br>
-                        
-                    </div>
                 </section>
                 <section class="item">
-                    <div class="slide">                        
-                        
                             <h1>Step 2</h1>
                             <h2>Learn how to enter words into popular search engines</h2>   
-                        
-                    </div>
                 </section>
-                <section class="item search">
-                    <div class="slide"> 
-                        
+                <section class="item" data-bg="search">
                             <br>
-                        
-                    </div>
                 </section>
                 <section class="item">
-                    <div class="slide">
-                        
                             <h1>Step 3</h1>
                             <h2>Learn to browse Wikipedia</h2>
-
-                    </div>
                 </section>
-                <section class="item wikipedia">
-                    <div class="slide"> 
-                        
+                <section class="item" data-bg="wikipedia">
                             <br>
-                        
-                    </div>
                 </section>
-                <section class="item empathize">
-                    <div class="slide">
-                        
+                <section class="item" data-bg="empathize">
                             <h1>Step 4</h1>
                             <h2>Learn to empathize</h2>
-                        
-                    </div>
                 </section>
-                <section class="item graph">
-                    <div class="slide">
-                                                                                
+                <section class="item" data-bg="graph">
                             <h1>Your internet seach skills will double in less than a year!</h1>
-                        
-                    </div>
                 </section>
                 <section class="item links last-item">
-                    <div class="slide">
-                        
                             <h1>Learn to Search!</h1>
                             <p>More avenues for learning:</p>
                             <ul>
@@ -148,26 +93,17 @@
                                 <li><a href="https://medium.com/funny-stuff/d7e5d14065f1">Miss Disruption</a></li>
                                 <li><a href="http://www.vidaweb.org/the-count">VidaWeb</a></li>
                             </ul>
-                        
-                    </div>
                 </section>
-                <nav>
-                    <a class="looper-control" data-looper="prev" href="#controlLooper">
-                        &lt;
-                    </a>
-                    <a class="looper-control right" data-looper="next" href="#controlLooper">
-                        &gt;
-                    </a>
-                </nav>
             </div>
+            <nav class="control next">
+                <button id="js-next-btn" class="button" title="Next Slide">&gt;</button>
+            </nav>            
         </div>    
         <footer>
-            <p>Contact educators <a href=http://joannemcneil.com/>Joanne McNeil</a> and <a href=http://nimbupani.com/>Divya Manian</a> if you need more professional assistance. Follow <a href="http://twitter.com/learntosearch">@learntosearch</a> if you want tweet-sized advice. <button class="button" id="js-teach-button">Teach someone how to search</button></p>
+            <p>Contact educators <a href=http://joannemcneil.com/>Joanne McNeil</a> and <a href=http://nimbupani.com/>Divya Manian</a> if you need more professional assistance. Follow <a href="http://twitter.com/learntosearch">@learntosearch</a> if you want tweet-sized advice.</p>
             <p class=credits>Thanks to <a href=http://www.hiddendriver.com>Astra Taylor</a>, <a href=http://prettylittlehead.com/>Farrah Bostic</a>, 
             <a href=http://postwhoreamerica.com/>Melissa Gira Grant</a>, <a href=http://adifferentclass.com/>Sarah Jaffe</a>, <a href=https://medium.com/@fake_train>Kate Losse</a>, and <a href="http://twitter.com/garannm">Garann Means</a>.</p>   
         </footer>    
-        <div class="teach-form" id="wufoo-zohx3rg069j5eu">
-        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
