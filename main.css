@@ -656,23 +656,6 @@ header h1 {
     font-weight: normal;
 }
 
-header h1 b {
-    display: inline-block;
-    height: 1em;
-    vertical-align: -12%;
-    font-weight: normal;
-    border-left: 1px solid;
-    -webkit-animation: blink 1s infinite linear;
-    opacity: 1;
-}
-
-@-webkit-keyframes blink {
-    50% { opacity: 1; }
-    51% { opacity: 0; }
-    99% { opacity: 1; }
-} 
-
-
 .flexbox body,
 .flexboxlegacy body {
     display: -webkit-flex;
