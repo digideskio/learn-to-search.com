@@ -83,6 +83,7 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 /* Show the wufoo form */
 $('#js-teach-button').click(function(e) {
 	wufooContainer.addClass('show-container');
+    $('#wufooFormzohx3rg069j5eu').height('260px');
 	e.stopPropagation();
 });
 
