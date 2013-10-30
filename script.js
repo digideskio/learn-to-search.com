@@ -17,63 +17,52 @@ $slides.each(function(index) {
 	this.id = 'slide-' + index; 
 });
 
+if(Modernizr.flexbox || Modernizr.flexboxlegacy) {
 
-/* Show the correct element if URL refers to it */
-if (hash != '') {	
-	slideIndex = +(/^#slide\-(.+)/g.exec(hash)[1]);
-	displaySlide(slideIndex);		
-} else {
-	displaySlide(slideIndex);
-	updateURL(slideIndex);
-}
-
-$('.control button').click(function() {	
-	if(this.id == 'js-prev-btn') {
-		slideIndex = (slideIndex == 0 ? slideLength - 1 : slideIndex - 1);
+	/* Show the correct element if URL refers to it */
+	if (hash != '') {	
+		slideIndex = +(/^#slide\-(.+)/g.exec(hash)[1]);
+		displaySlide(slideIndex);		
 	} else {
-		slideIndex = (slideIndex + 1) % slideLength;
+		displaySlide(slideIndex);
+		updateURL(slideIndex);
 	}
 
-	displaySlide(slideIndex);
-	updateURL(slideIndex);
-	
-});
+	$('.control button').click(function() {	
+		if(this.id == 'js-prev-btn') {
+			slideIndex = (slideIndex == 0 ? slideLength - 1 : slideIndex - 1);
+		} else {
+			slideIndex = (slideIndex + 1) % slideLength;
+		}
+
+		displaySlide(slideIndex);
+		updateURL(slideIndex);
+		
+	});
 
 
-function displaySlide(slideId) {	
-	$('#slide-' + currentSlide).removeClass('active');
-	
-	$('#slide-' + slideId).addClass('active');
+	function displaySlide(slideId) {	
+		$('#slide-' + currentSlide).removeClass('active');
+		
+		$('#slide-' + slideId).addClass('active');
 
-	$slidesContainer.attr('data-bg', '');
-	$slidesContainer.attr('data-bg', $('#slide-' + slideId).data('bg'));	
+		$slidesContainer.attr('data-bg', '');
+		$slidesContainer.attr('data-bg', $('#slide-' + slideId).data('bg'));	
 
-	if(currentSlide === 0 || currentSlide != slideId) {
-		currentSlide = slideId;
-	} 	
-};
+		if(currentSlide === 0 || currentSlide != slideId) {
+			currentSlide = slideId;
+		} 	
+	};
 
-function updateURL (slideId) {
-	if(document.location.hash !== '#slide-' + slideId) {
-		document.location.hash = '#slide-' + slideId;
+	function updateURL (slideId) {
+		if(document.location.hash !== '#slide-' + slideId) {
+			document.location.hash = '#slide-' + slideId;
+		}
 	}
+
+} else {
+	$slides.addClass('active');
 }
-
-/* Update the URL when the next slide is going to be shown 
-myLooper.on('show', function (e) {
-	
-	if(document.location.hash !== e.relatedTarget.id) {
-		document.location.hash = e.relatedTarget.id;	
-	}
-});
-
-/* Stop the looping once last slide is reached - like a proper slide show. 
-myLooper.on('shown', function (e) {    	
-	var $slide = $(e.relatedTarget);
-    if ($slide.hasClass('last-item')) {   
-    	$slide.parent().parent().addClass('last-item-parent');    
-    }
-}); */
 
 /* Wufoo form set up */
 var zohx3rg069j5eu;(function(d, t) {

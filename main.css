@@ -673,7 +673,8 @@ header h1 b {
 } 
 
 
-body {
+.flexbox body,
+.flexboxlegacy body {
     display: -webkit-flex;
     display: flex;            
     -webkit-flex-flow: column; 
@@ -681,12 +682,16 @@ body {
     flex-flow: column;
 }
 
-header, footer {    
+.flexbox header, 
+.flexbox footer,
+.flexboxlegacy header,
+.flexboxlegacy footer {    
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
 }
 
-.container {
+.flexbox .container,
+.flexboxlegacy .container {
      display: -webkit-flex;
     display: flex;            
     -webkit-flex-flow: row; 
@@ -697,8 +702,10 @@ header, footer {
     flex: 1 0 auto;
 }
 
-.control,
-.content {
+.flexbox .control,
+.flexboxlegacy .control,
+.flexbox .content,
+.flexboxlegacy .content {
     -webkit-flex: 1 0 auto;
     flex: 1 0 auto;
     -webkit-justify-content: center;    
@@ -729,7 +736,13 @@ header, footer {
     color: #fff;
 }
 
-.content {
+.no-flexbox .control,
+.no-flexboxlegacy .control {
+    display: none;
+}
+
+.flexbox .content,
+.flexboxlegacy .content {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: -webkit-flex;
@@ -751,6 +764,13 @@ header, footer {
 .item.active {
     opacity: 1;
     display: block;
+}
+
+.no-flexboxlegacy .item.active,
+.no-flexbox .item.active {
+    margin: 2em;
+    height: 500px;
+    width: auto;
 }
 
 #js-teach-button {
@@ -817,6 +837,7 @@ footer p {
     text-align:center;
 }
 
+
 .container[data-bg="toilets"] {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(techconference-audience.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(techconference-audience.jpg);
@@ -846,15 +867,21 @@ footer p {
 }
 
 
-.container[data-bg="write-email"]{
+.container[data-bg="write-email"],
+.no-flexbox .item[data-bg="write-email"],
+.no-flexboxlegacy .item[data-bg="write-email"] {
     background: url(email.png) center center no-repeat;    
 }
 
-.container[data-bg="search"] {
+.container[data-bg="search"],
+.no-flexbox .item[data-bg="search"],
+.no-flexboxlegacy .item[data-bg="search"] {
     background: url(LTS-google.gif) center center no-repeat;    
 }
 
-.container[data-bg="wikipedia"] {
+.container[data-bg="wikipedia"],
+.no-flexbox .item[data-bg="wikipedia"],
+.no-flexboxlegacy .item[data-bg="wikipedia"] {
     background: url(wikipedia%20browse.gif) center center no-repeat;    
 }    
 
@@ -863,6 +890,16 @@ footer p {
 .container[data-bg="search"] {
     background-size: contain;
 }
+
+.no-flexbox .item[data-bg="write-email"],
+.no-flexboxlegacy .item[data-bg="write-email"],
+.no-flexbox .item[data-bg="search"],
+.no-flexboxlegacy .item[data-bg="search"],
+.no-flexbox .item[data-bg="write-email"],
+.no-flexboxlegacy .item[data-bg="write-email"] {
+    height: 800px;
+}
+
 
 .container[data-bg="book-review"] {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(book-reviews.jpg);
@@ -910,6 +947,13 @@ footer p {
     text-align: right;
     display: block;
     width: 100%;
+}
+
+.no-flexbox .item[data-bg="teach"] .image img,
+.no-flexboxlegacy .item[data-bg="teach"] .image img {
+    width: 300px;
+    float: left;
+    margin-right: 2em;
 }
 
 .item[data-bg="teach"] h1 {
