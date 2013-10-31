@@ -657,8 +657,10 @@ header h1 {
 
 .flexbox body,
 .flexboxlegacy body {
+    display: -webkit-box;
     display: -webkit-flex;
-    display: flex;            
+    display: flex;      
+    -webkit-box-orient: horizontal;      
     -webkit-flex-flow: column; 
     flex-direction: column;   
     flex-flow: column;
@@ -668,18 +670,21 @@ header h1 {
 .flexbox footer,
 .flexboxlegacy header,
 .flexboxlegacy footer {    
+    -webkit-flex: 1;
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
 }
 
 .flexbox .container,
 .flexboxlegacy .container {
+    display: -webkit-box;
      display: -webkit-flex;
     display: flex;            
     -webkit-flex-flow: row; 
     flex-direction: row;   
     flex-flow: row nowrap;
     width: 100%;
+    -webkit-flex: 1;
     -webkit-flex: 1 0 auto;
     flex: 1 0 auto;
 }
@@ -688,10 +693,13 @@ header h1 {
 .flexboxlegacy .control,
 .flexbox .content,
 .flexboxlegacy .content {
+    -webkit-flex: 1;
     -webkit-flex: 1 0 auto;
     flex: 1 0 auto;
+    -webkit-box-pack: start;
     -webkit-justify-content: center;    
     justify-content: center; 
+    display: -webkit-box;
     display: -webkit-inline-flex;
     display: inline-flex;   
 }
@@ -702,10 +710,12 @@ header h1 {
 }
 
 .control.prev {
+    -webkit-box-pack: start;
     -webkit-justify-content: flex-start;  
 }
 
 .control.next {
+    -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
 }
 
@@ -726,6 +736,7 @@ header h1 {
 .flexboxlegacy .content {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     -webkit-align-self: center;
@@ -763,6 +774,7 @@ header h1 {
 
 
 footer, .show-container {    
+    -webkit-flex: 1;
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;    
     padding: 2rem;  
@@ -901,11 +913,14 @@ footer p {
 
 
 .item.active[data-bg="teach"] {
+    display: -webkit-box;
     display: -webkit-flex;
     display: flex; 
+    -webkit-box-orient: horizontal;
     -webkit-flex-flow: row; 
     flex-direction: row;   
     flex-flow: row;
+    -webkit-box-align: start;
     -webkit-justify-content: center;
     justify-content: center;
 
@@ -913,6 +928,7 @@ footer p {
 
 .item[data-bg="teach"] .image,
 .item[data-bg="teach"]  h1 {
+    -webkit-flex: 1;
     -webkit-flex: 1 0 auto;
     flex: 1 0 auto;
 }
